@@ -9,7 +9,7 @@ TODO : Modify to match your project specific Travis Build
 
 ## Web Site
 
-TODO : Please provide a link to your web site ![](https://web2560.herokuapp.com/)
+TODO : Please provide a link to your web site is : https://web2560.herokuapp.com/
 
 ## Key Features
 
