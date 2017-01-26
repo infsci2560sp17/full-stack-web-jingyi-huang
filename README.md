@@ -1,21 +1,25 @@
 # Easy Yummies
 
-•	What is the proposed name for your Web application?
-o	Easy Yummies
-•	Who is the target audience for your Web application?
-o	People with limited culinary skills and spare time to cook easy and delicious meals
-•	What problem is it intended to solve for the target audience?
-o	People with limited culinary skills and little spare time often find it is difficult to find recipes that are easy to cook and yummy as well. On one hand, as an editor, I will publish some easy recipes for various categories (e.g. pasta, dessert, salad, etc.) regularly. On the other hand, registered users are invited to publish their own recipes as well. All published recipes are rated, commented by registered users. In addition, “Cooking FAQ Forum” is created to be dedicatedly serve as a discussion forum about tips and questions on cooking.
-•	How will it meet the minimum project requirements?
-o	Recipes can be browsed without a login. If a user wants to comment, rate and pin the recipes, a login is required. Similar operation is applied to the discussion forum as well. All public data will be accessible through RESTful services.
-•	Why is your proposed Web application unique or creative beyond simply meeting the minimum requirements?
-o	I will rank the recipes based on ratings and number of views. Every top ten contributor per month are rewarded (e.g. shopping coupons or something else). I will push customized recipes to users based on their previous cooking history.
+1.	What is the proposed name for your Web application?
+-Easy Yummies
+2.	Who is the target audience for your Web application?
+-People with limited culinary skills and spare time to cook easy and delicious meals
+3.	What problem is it intended to solve for the target audience?
+-People with limited culinary skills and little spare time often find it is difficult to find recipes that are easy to cook and yummy as well. On one hand, as an editor, I will publish some easy recipes for various categories (e.g. pasta, dessert, salad, etc.) regularly. On the other hand, registered users are invited to publish their own recipes as well. All published recipes are rated, commented by registered users. In addition, “Cooking FAQ Fo-um” is created to be dedicatedly serve as a discussion forum about tips and questions on cooking.
+4.	How will it meet the minimum project requirements?
+-Recipes can be browsed without a login. If a user wants to comment, rate and pin the recipes, a login is required. Similar operation is applied to the discussion forum as well. All public data will be accessible through RESTful services.
+5.	Why is your proposed Web application unique or creative beyond simply meeting the minimum requirements?
+-I will rank the recipes based on ratings and number of views. Every top ten contributor per month are rewarded (e.g. shopping coupons or something else). I will push customized recipes to users based on their previous cooking history.
 
 
 ## Build status
 
 
 [![Build Status](https://travis-ci.org/infsci2560sp17/full-stack-web-jingyi-huang.svg?branch=master)](https://travis-ci.org/infsci2560sp17/full-stack-web-jingyi-huang)
+
+##ChangeLog
+[ChangeLog](CHANGELOG.md)
+
 
 ## Web Site
 
@@ -93,7 +97,7 @@ All known errors cause the resource to return HTTP error code header together wi
             <tag>puppy</tag>
         </tags>
 </PhotoTags>
-```
+
 
 ## Technologies Used
 
