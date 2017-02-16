@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>User Home</title>
+    </head>
+    <body>
+        <h1 data-th-inline="text">[[${#httpServletRequest.remoteUser}]]'s Recipes!</h1>
+
+        <div>
+            <table style="border: 1px solid black">
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Recipe Type</th>
+                    <th>Calories</th>
+                    <th> Time Needed</th>
+                </tr>
+                <tr data-th-each="recipe : ${recipes}">
+                    <td data-th-text="${recipe.id}"></td>
+                    <td data-th-text="${recipe.name}"></td>
+                    <td data-th-text="${recipe.recipeType}"></td>
+                    <td data-th-text="${recipe.calories}"></td>
+                    <td data-th-text="${recipe.timeNeed}"></td>
+                </tr>
+            </table>
+        </div>
+
+        <hr />
+        Add Recipe<br />
+        <form data-th-action="@{/recipes/add}" name="addRecipeForm" method="post">
+            Name: <input type="text" name="name" /><br />
+            Calories: <input type="text" name="calories" /><br />
+            Time Needed: <input type="text" name="timeNeed" /><br />
+            Recipe Type:<br />
+            <input type="radio" name="recipeType" value="Unknown" checked="checked" /> Unknown<br />
+            <input type="radio" name="recipeType" value="Meat" /> Meat<br />
+            <input type="radio" name="recipeType" value="Pasta" /> Pasta<br />
+            <input type="radio" name="recipeType" value="Soup" /> Soup<br />
+            <input type="radio" name="recipeType" value="Salad" /> Salad<br />
+            <input type="radio" name="recipeType" value="Vegetarian" /> Vegetarian<br />
+            <input type="submit" value="Add Recipe"/>
+        </form>
+
+        <hr />
+        <form data-th-action="@{/logout}" method="post">
+            <input type="submit" value="Sign Out"/>
+        </form>
+    </body>
+</html>
