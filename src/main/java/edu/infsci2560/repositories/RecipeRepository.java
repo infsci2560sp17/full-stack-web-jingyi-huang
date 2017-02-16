@@ -10,7 +10,8 @@ import org.springframework.data.repository.PagingAndSortingRepository;
 
 public interface RecipeRepository extends PagingAndSortingRepository<Recipe,Long> {
 
-  @Override
+
+  /*@Override
   @RestResource(exported = false)
   void delete(Long long);
 
@@ -27,5 +28,5 @@ public interface RecipeRepository extends PagingAndSortingRepository<Recipe,Long
 
   @Override
   @RestResource(exported = false)
-  void deleteAll();
+  void deleteAll(); */
 }
