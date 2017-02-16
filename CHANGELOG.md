@@ -36,6 +36,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 - Configured developer workspace.
 - Deployed to Heroku.
 
-[Unreleased]: https://github.com/infsci2560sp17/full-stack-web-jingyi-huang/compare/v1.2...HEAD
+[Unreleased]: https://github.com/infsci2560sp17/full-stack-web-jingyi-huang/compare/v1.3...HEAD
+[v1.3]: https://github.com/infsci2560sp17/full-stack-web-jingyi-huang/compare/v1.2...v1.3
 [v1.2]: https://github.com/infsci2560sp17/full-stack-web-jingyi-huang/compare/v1.1...v1.2
 [v1.1]: https://github.com/infsci2560sp17/full-stack-web-jingyi-huang/compare/...v1.1
