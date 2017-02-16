@@ -7,6 +7,20 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 ### Added
 - TBD.
 
+## [v1.3] - 2017-02-16
+### Added
+- Recipe Entity
+- Recipe Repository
+- Recipe Service
+- Recipe Controller
+- recipes html
+
+### Changed
+- FullStackWebApplication.java, add some recipe examples to test
+
+
+
+
 ## [v1.2] - 2017-01-28
 ### Added
 - Answered in README.md
