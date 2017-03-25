@@ -7,6 +7,7 @@ package edu.infsci2560.controllers;
 
 import edu.infsci2560.models.Recipe;
 import edu.infsci2560.repositories.RecipeRepository;
+import edu.infsci2560.repositories.RatingRepository;
 import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
@@ -28,6 +29,8 @@ import org.springframework.web.servlet.ModelAndView;
 public class RecipesController {
     @Autowired
     private RecipeRepository repository;
+    @Autowired
+    private RatingRepository ratingRepository;
 
     @RequestMapping(value = "recipes", method = RequestMethod.GET)
     public ModelAndView index() {
