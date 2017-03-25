@@ -2,12 +2,12 @@ package edu.infsci2560.controllers;
 
 import edu.infsci2560.repositories.*;
 import edu.infsci2560.services.*;
-import edu.infsci2560.models.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
+import org.springframework.stereotype.Controller;
 
-@RestController
-@RequestMapping("/recipes/{recipeId}/ratings")
+@Controller
 public class RatingController {
     
     @Autowired
@@ -18,9 +18,10 @@ public class RatingController {
     
      
     
-    /*@RequestMapping(method=RequestMethod.GET)
-    public modle
-    @ResponseBody Rating find(@PathVariable("recipeId")Long recipeId){
-        return ratingService.findAllRatingsForOne(recipeId);
-    }*/
+    @RequestMapping(value="/recipes/{recipeId}/ratings", method=RequestMethod.GET)
+    public ModelAndView Ratings(@PathVariable("recipeId") Long recipeId){
+        return new ModelAndView("ratings","ratings",ratingService.findAllRatingsForOne(recipeId));
+    }
+    
+    
 }
