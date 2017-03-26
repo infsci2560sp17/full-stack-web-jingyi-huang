@@ -6,13 +6,18 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 
-@RestController
+@Controller
 public class ApiController {    
     private final AtomicInteger counter = new AtomicInteger();
     
-    @RequestMapping("/api")        
+    /*@RequestMapping("/api")        
     public @ResponseBody Greeting index(@RequestParam(value="name", required=false, defaultValue="Stranger") String name) {
         return new Greeting(counter.incrementAndGet(), name);
-    }
+    }*/
+   @RequestMapping("/api")
+   public ModelAndView main(){
+       return new ModelAndView("main");
+   }
 }
