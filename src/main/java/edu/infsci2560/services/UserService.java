@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 
 @RestController
-@RequestMapping("/public/api/user")
+@RequestMapping("/public/api/users")
 public class UserService {
 
     @Autowired
@@ -33,7 +33,7 @@ public class UserService {
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET, produces = "application/json")
-    public ResponseEntity<User> findById(@PathVariable("id") Long id) {
+    public ResponseEntity<User> list(@PathVariable("id") Long id) {
         HttpHeaders headers = new HttpHeaders();
         return new ResponseEntity<>(repository.findOne(id), headers, HttpStatus.OK);
     }
@@ -55,6 +55,9 @@ public class UserService {
         HttpHeaders headers = new HttpHeaders();
         return new ResponseEntity<>(repository.findByCity(city),headers, HttpStatus.OK);
     }
-    
+
+
+   
     
 }
+

@@ -31,6 +31,7 @@ public class Recipe{
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     protected Long id;
+    
     protected String name;
     protected RecipeType recipeType;
     protected String calories;

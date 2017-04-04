@@ -7,16 +7,19 @@ import javax.persistence.Id;
 
 @Entity
 public class User {
+    
+
 
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
-    private Long userid;
+    private Long userId;
     
     protected String username;
     protected String city;
     protected String email;
     protected String password;
-    protected User() {}
+
+    public User() {}
 
     public User(String username, String password, String email, String city) {
         this.username = username;
@@ -27,21 +30,21 @@ public class User {
 
     @Override
     public String toString() {
-        return String.format("User[id=%d, username='%s', password='%s', email='%s', city='%s']", getId(), getUserName(), getEmail(), getPassword(),getCity());
+        return String.format("User[id=%d, username='%s', password='%s', email='%s', city='%s']", getUserId(), getUserName(), getEmail(), getPassword(),getCity());
     }
 
     /**
-     * @return the userid
+     * @return the userId
      */
-    public Long getId() {
-        return userid;
+    public Long getUserId() {
+        return userId;
     }
 
     /**
-     * @param userid the id to set
+     * @param userId the id to set
      */
-    public void setId(Long userid) {
-        this.userid = userid;
+    public void setUserId(Long userId) {
+        this.userId = userId;
     }
 
     /**
