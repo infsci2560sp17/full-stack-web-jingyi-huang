@@ -11,7 +11,7 @@ public class User {
 
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
-    private Long userId;
+    private Long id;
     
     private String username;
     private String city;
@@ -20,7 +20,8 @@ public class User {
 
     public User() {}
 
-    public User(String username, String password, String email, String city) {
+    public User(Long userId,String username, String password, String email, String city) {
+        this.id = userId;
         this.username = username;
         this.password = password;
         this.email = email;
@@ -29,27 +30,27 @@ public class User {
 
     @Override
     public String toString() {
-        return String.format("User[id=%d, username='%s', password='%s', email='%s', city='%s']", getUserId(), getUserName(), getPassword(),getEmail(), getCity());
+        return String.format("User[id=%d, username='%s', password='%s', email='%s', city='%s']", getId(), getUserName(), getPassword(),getEmail(), getCity());
     }
 
     /**
      * @return the userId
      */
-    public Long getUserId() {
-        return userId;
+    public Long getId() {
+        return id;
     }
 
     /**
      * @param userId the id to set
      */
-    public void setUserId(Long userId) {
-        this.userId = userId;
+    public void setId(Long userId) {
+        this.id = userId;
     }
 
     /**
      * @return username
      */
-    public String getUserName() {
+    public String getn() {
         return username;
     }
 

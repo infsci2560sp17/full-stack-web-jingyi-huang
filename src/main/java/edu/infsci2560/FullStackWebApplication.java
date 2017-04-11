@@ -28,7 +28,8 @@ public class FullStackWebApplication {
         repository.save(new Recipe(4L, "BBQ Style Burger", RecipeType.Meat, "600 kcal", "20 min"));
 
         UserRepository  userRepository = ctx.getBean(UserRepository.class);
-        userRepository.save(new User("magician","123","magician@gmail.com","Pittsburgh"));
+        userRepository.save(new User(1L,"magician","123","magician@gmail.com","Pittsburgh"));
+        userRepository.save(new User(2L,"walker","123","walker@gmail.com","New York"));
     }
 
 

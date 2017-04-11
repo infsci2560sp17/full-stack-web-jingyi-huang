@@ -26,10 +26,10 @@ public class UserController {
     }
     
     //find user by userId
-    @RequestMapping(value="/users/{userId}",method=RequestMethod.GET)
-    public ModelAndView index(@PathVariable("userId") Long userId){
+    @RequestMapping(value="/users/{id}",method=RequestMethod.GET)
+    public ModelAndView index(@PathVariable("id") Long id){
         
-        return new ModelAndView("users","users",repository.findOne(userId));
+        return new ModelAndView("users","users",repository.findOne(id));
     }
     
     /*//find users in the same city
