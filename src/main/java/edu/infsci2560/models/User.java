@@ -7,17 +7,16 @@ import javax.persistence.Id;
 
 @Entity
 public class User {
-    
 
 
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
     private Long userId;
     
-    protected String username;
-    protected String city;
-    protected String email;
-    protected String password;
+    private String username;
+    private String city;
+    private String email;
+    private String password;
 
     public User() {}
 
@@ -30,7 +29,7 @@ public class User {
 
     @Override
     public String toString() {
-        return String.format("User[id=%d, username='%s', password='%s', email='%s', city='%s']", getUserId(), getUserName(), getEmail(), getPassword(),getCity());
+        return String.format("User[id=%d, username='%s', password='%s', email='%s', city='%s']", getUserId(), getUserName(), getPassword(),getEmail(), getCity());
     }
 
     /**

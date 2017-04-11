@@ -1,12 +1,10 @@
 package edu.infsci2560.models;
 
-import javax.persistence.Column;
-import javax.persistence.Embeddable;
-import javax.persistence.ManyToOne;
+
+
 import java.io.Serializable;
-import org.apache.commons.lang3.builder.EqualsBuilder;
-import org.apache.commons.lang3.builder.HashCodeBuilder;
 import java.util.Objects;
+import javax.persistence.Embeddable;
 
 @Embeddable
 public class RatingPk implements Serializable {

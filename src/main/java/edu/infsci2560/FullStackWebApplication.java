@@ -2,8 +2,10 @@ package edu.infsci2560;
 
 import edu.infsci2560.models.Recipe;
 import edu.infsci2560.models.Recipe.RecipeType;
+import edu.infsci2560.models.User;
 import edu.infsci2560.repositories.RecipeRepository;
 
+import edu.infsci2560.repositories.UserRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -24,6 +26,9 @@ public class FullStackWebApplication {
         repository.save(new Recipe(2L, "Tuna Salad", RecipeType.Salad,"400 kcal", "10 min"));
         repository.save(new Recipe(3L, "Spicy Tomato Soup", RecipeType.Soup, "250 kcal", "20 min"));
         repository.save(new Recipe(4L, "BBQ Style Burger", RecipeType.Meat, "600 kcal", "20 min"));
+
+        UserRepository  userRepository = ctx.getBean(UserRepository.class);
+        userRepository.save(new User("magician","123","magician@gmail.com","Pittsburgh"));
     }
 
 
