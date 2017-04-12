@@ -50,7 +50,7 @@ public class User {
     /**
      * @return username
      */
-    public String getn() {
+    public String getUserName() {
         return username;
     }
 
