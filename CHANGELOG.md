@@ -3,9 +3,17 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
-## [Unreleased]
+## [v1.5] - 2017-04-18
 ### Added
-- TBD.
+- html page to review a particualr recipe details and rating history
+- add rating function for registered user
+- html pages to review user lists and user details
+- add js to publish recipe
+
+### Updated
+- modify Recipe model, update ingredients and description attributes
+- consolidate all html pages
+
 
 ## [v1.4] - 2017-03-25
 ### Added
@@ -50,7 +58,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 
 [Unreleased]: https://github.com/infsci2560sp17/full-stack-web-jingyi-huang/compare/v1.4...HEAD
-[v1.3]: https://github.com/infsci2560sp17/full-stack-web-jingyi-huang/compare/v1.3...v1.4
+[v1.5]: https://github.com/infsci2560sp17/full-stack-web-jingyi-huang/compare/v1.4...v1.5
+[v1.4]: https://github.com/infsci2560sp17/full-stack-web-jingyi-huang/compare/v1.3...v1.4
 [v1.3]: https://github.com/infsci2560sp17/full-stack-web-jingyi-huang/compare/v1.2...v1.3
 [v1.2]: https://github.com/infsci2560sp17/full-stack-web-jingyi-huang/compare/v1.1...v1.2
 [v1.1]: https://github.com/infsci2560sp17/full-stack-web-jingyi-huang/compare/...v1.1
