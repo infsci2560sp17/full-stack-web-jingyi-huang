@@ -5,12 +5,12 @@
  */
 package edu.infsci2560.models;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+
+import java.util.List;
 
 
 @Entity
@@ -31,34 +31,51 @@ public class Recipe{
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     protected Long id;
-    
+
     protected String name;
+
     protected RecipeType recipeType;
+
     protected String calories;
+
+    //protected String ingredients;
+    @ElementCollection(targetClass=String.class)
+    protected List<String> ingredients;
+
     //protected String  description;
+    @ElementCollection(targetClass=String.class)
+    protected List<String> description;
+
     protected String  timeNeed;
+
+    protected Long   author;
+
+    //protected float average;
 
     public Recipe() {
         this.id = Long.MAX_VALUE;
         this.name = null;
         this.recipeType = RecipeType.Unknown;
         this.calories = null;
-        //this.description = null;
+        this.description = null;
         this.timeNeed = null;
+        this.author = null;
     }
 
-    public Recipe(Long id, String name, RecipeType recipeType, String calories, String timeNeed) {
+
+    public Recipe(Long id, String name, RecipeType recipeType, String calories, List<String> ingredients, List<String> description, String timeNeed) {
         this.id = id;
         this.name = name;
         this.recipeType = recipeType;
         this.calories = calories;
-        //this.description = description;
+        this.ingredients = ingredients;
+        this.description = description;
         this.timeNeed = timeNeed;
     }
 
     @Override
     public String toString() {
-        return "[ id=" + this.id + ", name=" + this.name + ", recipeType=" + this.recipeType + ", calories=" +this.calories+", timeNeed=" +this.timeNeed+" ]";
+        return "[ id=" + this.id + ", name=" + this.name + ", recipeType=" + this.recipeType + ", calories=" +this.calories+", timeNeed=" +this.timeNeed+", ingredients="+this.ingredients+", description="+this.description+", author="+this.author+" ]";
     }
 
     @Override
@@ -157,4 +174,36 @@ public class Recipe{
         this.timeNeed = timeNeed;
     }
 
+
+    public List<String> getIngredients() {
+        return ingredients;
+    }
+
+    public void setIngredients(List<String> ingredients) {
+        this.ingredients = ingredients;
+    }
+
+    public List<String> getDescription() {
+        return description;
+    }
+
+    public void setDescription(List<String> description) {
+        this.description = description;
+    }
+
+    public Long getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(Long author) {
+        this.author = author;
+    }
+
+    /*public float getAverage() {
+        return average;
+    }
+
+    public void setAverage(float average) {
+        this.average = average;
+    }*/
 }

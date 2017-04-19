@@ -1,27 +1,36 @@
 package edu.infsci2560.models;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 public class User {
 
 
+
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
-    private Long id;
-    
-    private String username;
-    private String city;
-    private String email;
+    protected Long userId;
+
+    @Column(nullable = false, length = 30, unique = true)
+    public String username;
+
+    @Column
+    public String city;
+
+    @Column
+    public String email;
+
+    @Column
     private String password;
+
+    //@OneToMany
+    //public Set<Recipe> recipes = new HashSet<>();
 
     public User() {}
 
-    public User(Long userId,String username, String password, String email, String city) {
-        this.id = userId;
+    public User(String username, String password, String email, String city) {
         this.username = username;
         this.password = password;
         this.email = email;
@@ -30,21 +39,21 @@ public class User {
 
     @Override
     public String toString() {
-        return String.format("User[id=%d, username='%s', password='%s', email='%s', city='%s']", getId(), getUserName(), getPassword(),getEmail(), getCity());
+        return String.format("User[id=%d, username='%s', password='%s', email='%s', city='%s']", getUserId(), getUserName(), getPassword(),getEmail(), getCity());
     }
 
     /**
      * @return the userId
      */
-    public Long getId() {
-        return id;
+    public Long getUserId() {
+        return userId;
     }
 
     /**
      * @param userId the id to set
      */
-    public void setId(Long userId) {
-        this.id = userId;
+    public void setUserId(Long userId) {
+        this.userId = userId;
     }
 
     /**
@@ -91,4 +100,11 @@ public class User {
         this.password=password;
     }
 
+    /*public Set<Recipe> getRecipes() {
+        return recipes;
+    }
+
+    public void setRecipes(Set<Recipe> recipes) {
+        this.recipes = recipes;
+    }*/
 }
