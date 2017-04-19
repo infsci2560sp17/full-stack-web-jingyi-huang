@@ -67,9 +67,9 @@ public class FullStackWebApplication {
         //repository.save(new Recipe(3L, "Spicy Tomato Soup", RecipeType.Soup, "250 kcal", "20 min"));
         //repository.save(new Recipe(4L, "BBQ Style Burger", RecipeType.Meat, "600 kcal", "20 min"));
 
-        ratingRepository.save(new Rating(new RatingPk(1L,3L),5));
-        ratingRepository.save(new Rating(new RatingPk(1L,2L),3));
-        ratingRepository.save(new Rating(new RatingPk(2L,1L),4));
+        ratingRepository.save(new Rating(new RatingPk(4L,3L),5));
+        ratingRepository.save(new Rating(new RatingPk(4L,2L),3));
+        ratingRepository.save(new Rating(new RatingPk(5L,1L),4));
         //ratingRepository.save(new Rating(new RatingPk(2L,3L),3));
 
     }

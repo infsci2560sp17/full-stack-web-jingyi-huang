@@ -20,31 +20,37 @@
 
 [![Build Status](https://travis-ci.org/infsci2560sp17/full-stack-web-jingyi-huang.svg?branch=master)](https://travis-ci.org/infsci2560sp17/full-stack-web-jingyi-huang)
 
-##ChangeLog
-[ChangeLog](CHANGELOG.md)
+
+## Changelog
+[Changelog](CHANGELOG.md)
 
 
 ## Web Site
 
-[Easy Yummies]  (https://web2560.herokuapp.com/)
+[Easy Yummies](https://web2560.herokuapp.com/)
 
 ## Key Features
 
-TODO : Please list key features of your project.
+* User can review recipes details with login
+* User can publish recipes with login
+* User can rate any recipe with login
+* User can review user details with login
+* A recipe can be retrieved from its ID in JSON format
 
-* Key Feature 1
-* Key Feature 2
-* Key Feature N
 
 ## Project Details
 
 ### Landing Page
 
-TODO : please provide a description of your landing page inluding a screen shot ![](https://.../image.JPG)
+TODO : please provide a description of your landing page inluding a screen shot ![](screenshots/Recipes.png)
+
+### Display Page
+
+Review a particular recipe details including its rating history, and rate it  ![](screenshots/details.png)
 
 ### User Input Form
 
-TODO : please provide a description of at least 1 user input form including a screen shot ![](https://.../image.jpg)
+TODO : please provide a description of at least 1 user input form including a screen shot ![](screenshots/publish.png)
 
 ## API
 
@@ -52,16 +58,16 @@ TODO : please provide a description of at least 1 API including a sample of requ
 
 ### API Method 1
 
-    POST photos/:id/tags
+    GET recipes/{id}
 
 #### Parameters
 
-- **id** _(required)_ — The Photo ID to add tags for.
-- **tags** _(required)_ — Comma separated tags.
+- **id** _(required)_ — The recipe id.
+
 
 #### Response
 
-A JSON or XMLobject containing the PhotoID and list of tags accepted.
+A JSON  containing the PhotoID and list of tags accepted.
 
 #### Errors
 
