@@ -71,7 +71,7 @@ TODO : please provide a description of at least 1 API including a sample of requ
 
 #### Response
 
-A JSON  containing the PhotoID and list of tags accepted.
+{"id":4,"name":"Creamy Mushroom Pasta","recipeType":"Pasta","calories":"380 kcal","ingredients":["100g pasta","1/2 sliced onion","150g sliced mushroom","ham"],"description":["Put the pasta on to boil","Meanwhile fry sliced onions, mushroom and chopped ham a little","Drain the pasta and add the vegie sauce"],"timeNeed":"15 min","author":1}
 
 #### Errors
 
