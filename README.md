@@ -34,7 +34,8 @@
 * User can review recipes details with login
 * User can publish recipes with login
 * User can rate any recipe with login
-* User can review user details with login
+* User can update his/her own profile
+* User can review other user details with login
 * A recipe can be retrieved from its ID in JSON format
 
 
@@ -50,7 +51,10 @@ Review a particular recipe details including its rating history, and rate it  ![
 
 ### User Input Form
 
-TODO : please provide a description of at least 1 user input form including a screen shot ![](screenshots/publish.png)
+Publish Form : User can publish a recipe with login ![](screenshots/publish.png)
+
+Update Form : User can update his/her profile ![](screenshots/edit.png)
+
 
 ## API
 

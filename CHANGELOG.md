@@ -3,6 +3,11 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
+## [v1.6] - 2017-04-19
+### Added
+- add updating profile function for user
+- sign up
+
 ## [v1.5] - 2017-04-18
 ### Added
 - html page to review a particualr recipe details and rating history
@@ -57,7 +62,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 - Deployed to Heroku.
 
 
-[Unreleased]: https://github.com/infsci2560sp17/full-stack-web-jingyi-huang/compare/v1.4...HEAD
+[Unreleased]: https://github.com/infsci2560sp17/full-stack-web-jingyi-huang/compare/v1.6...HEAD
+[v1.5]: https://github.com/infsci2560sp17/full-stack-web-jingyi-huang/compare/v1.5...v1.6
 [v1.5]: https://github.com/infsci2560sp17/full-stack-web-jingyi-huang/compare/v1.4...v1.5
 [v1.4]: https://github.com/infsci2560sp17/full-stack-web-jingyi-huang/compare/v1.3...v1.4
 [v1.3]: https://github.com/infsci2560sp17/full-stack-web-jingyi-huang/compare/v1.2...v1.3
