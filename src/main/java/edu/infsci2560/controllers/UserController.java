@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
 
@@ -64,6 +65,30 @@ public class UserController {
         mv.addObject("recipe",recipeRepository.findByAuthor(user.getUserId(),new PageRequest(0,10)));
         return mv;
 
+    }
+    //get my profile
+    @RequestMapping(value = "/myprofile", method = RequestMethod.GET)
+    public ModelAndView user(HttpServletRequest request) {
+        ModelAndView mv = new ModelAndView("useredit");
+        String userName = request.getRemoteUser();
+        User user = repository.findByUsername(userName);
+        mv.addObject("user", user);
+        return mv;
+    }
+
+
+
+    //update user profile
+    @RequestMapping(value="/users/{userId}/edit", method = RequestMethod.PUT,consumes="application/x-www-form-urlencoded", produces = "application/json")
+    public String update(@RequestParam("password") String password,
+                               @RequestParam("city") String city,
+                               @RequestParam("email") String email,@PathVariable("userId") Long userId){
+        User currentUser = repository.findOne(userId);
+        currentUser.setCity(city);
+        currentUser.setPassword(password);
+        currentUser.setEmail(email);
+        repository.save(currentUser);
+        return "redirect:/users/"+userId;
     }
 
     

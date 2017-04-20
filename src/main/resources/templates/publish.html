@@ -4,9 +4,9 @@
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
     <link rel="stylesheet" type="text/css" href="https://www.w3schools.com/lib/w3.css" />
-    <link rel="stylesheet" type="text/css" href="/css/styles.css"/>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/styles.css"/>
     <title>Publish Recipe</title>
     <script type="text/javascript" data-th-inline="javascript">
         var ingredientsCount = 0;
@@ -40,6 +40,9 @@
                 <li class="nav-item"><a href="/users">Community</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
+                <li class="nav-item">
+                    <a href="/myprofile">My Profile</a>
+                </li>
                 <li >
                     <form class="signout" data-th-action="@{/logout}"  method="post">
                         <button type="submit" name="action" value="Sign Out" class="btn btn-info btn-sm" style="margin-top: 10px;
